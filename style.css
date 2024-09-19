@@ -1,0 +1,178 @@
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.pop-up-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+    background-color: black;
+
+    z-index: 345678;
+    opacity: 0.9;
+}
+
+.pop-up-wrapper img {
+    width: 30%;
+}
+
+.desktop-hide {
+    display: none;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+header ul li {
+    padding: 10px;
+}
+
+.top-header {
+    background-color: #00434d;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 58px;
+    padding-right: 15%;
+}
+
+.top-header ul {
+    margin: 0;
+    color: white;
+    font-size: 13px;
+}
+
+.middle-header,
+.bottom-header {
+    background-color: #defef6;
+    border-bottom: solid 0.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.middle-header svg {
+    width: 25%;
+    margin: 1.5%;
+}
+
+.bottom-header ul {
+    font-size: 18px;
+    height: 58px;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* body begins */
+
+.body-wrapper {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    padding-top: 1%;
+    padding-bottom: 10%;
+}
+
+.body {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 60%;
+    gap: 5% 5%;
+    grid-template-areas:
+        ". . .";
+}
+
+.body div {
+    width: 500px;
+    height: 300px;
+    background-color: blue;
+}
+
+.column1 div {
+    height: 100px;
+    border-bottom: solid;
+    background-color: yellow;
+}
+
+.column1:hover {
+    height: 100px;
+    border-bottom: solid;
+    background-color: yellow;
+    border: solid black;
+    cursor: pointer;
+}
+
+/* this is where my footer begins */
+
+footer {
+    position: relative;
+    bottom: 0;
+    background-color: #00434d;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+}
+
+footer svg {
+    width: 80%;
+}
+
+/* RESPONSIVENESS */
+
+@media (max-width: 414px) {
+    .top-header {
+        padding-right: 0;
+        justify-content: center;
+    }
+
+    .top-header ul {
+        padding-left: 0;
+    }
+
+    .middle-header svg {
+        width: 40%;
+    }
+
+    .bottom-header ul {
+        display: block;
+    }
+
+    .bottom-header ul li {
+        float: left;
+    }
+
+    .bottom-header ul {
+        height: auto;
+    }
+
+    .body {
+        display: block;
+    }
+
+    .body div {
+        width: 300px;
+    }
+
+    footer svg {
+        height: 20%;
+    }
+
+    header,
+    .body,
+    footer {
+        display: none;
+    }
+
+    .desktop-hide {
+        display: block;
+    }
+}
